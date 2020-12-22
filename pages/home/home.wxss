@@ -1,5 +1,8 @@
 /* pages/home/home.wxss */
 /*轮播图*/
+page {
+  background: #55a31b;
+}
 .banner-wrap {
   display: flex;
   justify-content: center;
