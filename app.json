@@ -1,0 +1,24 @@
+{
+  "pages":[
+    "pages/home/home",
+    "pages/search/search",
+    "pages/index/index",
+    "pages/advisory/advisory",
+    "pages/kindHot/index/index",
+    "pages/kindHot/doctorLogin/doctorLogin",
+    "pages/kindHot/governmentFile/governmentFile",
+    "pages/kindHot/scienceBook/scienceBook",
+    "pages/kindHot/scienceKnow/scienceKnow",
+    "pages/kindHot/scienceVideo/scienceVideo",
+    "pages/kindHot/other1/other1",
+    "pages/kindHot/other2/other2",
+    "pages/kindHot/talkToDoctor/talkToDoctor"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "护眼家",
+    "navigationBarTextStyle":"black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

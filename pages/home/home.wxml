@@ -1,0 +1,46 @@
+<!--pages/home/home.wxml-->
+<view>
+  <view wx:for="{{banner_images}}" wx:key="{{item.id}}">
+    <view wx:if="{{item.type==='banner'&&item.list.length>0}}">
+      <swiper class="banner-wrap" indicator-dots="true" circular="true" indicator-color="#e0e0e0" indicator-active-color="#fff" autoplay="true" interval="3000" duration="1000">
+        <swiper-item wx:for="{{item.list}}" wx:for-item="_item" wx:key="{{_item.id}}">
+          <image src="{{_item.picUrl}}"></image>
+        </swiper-item>
+      </swiper>
+    </view>
+  </view>
+
+  <view class="doctor_info">
+    <image src="/assets/doctor_info.jpeg" mode="widthFix"></image>
+  </view>
+
+  <view class="kind_hot">
+    <view wx:for="{{kind_images}}" wx:key="{{item.id}}">
+      <view  class="commonlyUsed" wx:if="{{item.type==='kind'&&item.list.length>0}}">
+        <view class="commonlyUsed_item" wx:for="{{item.list}}" wx:for-item="_item" wx:key="{{_item.id}}" data-value="{{_item}}" bindtap="handleClick">
+          <image src="{{_item.picUrl}}" background-size="cover" data-value="{{_item}}"></image>
+          <text>{{_item.title}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="advisory" bindtap="toAdvisory">
+    <view class="to_advisory">点击这里，立刻联系我助理</view>
+  </view>
+
+  <van-tabs color="#fff" title-active-color="#4cb230" title-inactive-color="#000" active="{{ active }}">
+    <van-tab title="全部">全部</van-tab>
+    <van-tab title="文章">文章</van-tab>
+    <van-tab title="视频">视频</van-tab>
+    <van-tab title="政策">政策</van-tab>
+    <van-tab title="专家">专家</van-tab>
+    <van-tab title="OK镜">OK镜</van-tab>
+    <van-tab title="多宝视">多宝视</van-tab>
+  </van-tabs>
+
+  <!--暂时扩充页面-->
+  <view class="doctor_info">
+    <image src="/assets/doctor_info.jpeg" mode="widthFix"></image>
+  </view>
+</view>
